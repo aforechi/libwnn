@@ -23,6 +23,12 @@ make -j 4
 sudo make install
 ```
 
+# Building the lib using conda
+
+cmake .. \
+-DPYTHON_LIBRARY=/usr/local/miniconda3/lib/libpython3.6m.dylib \
+-DPYTHON_INCLUDE_DIR=/usr/local/miniconda3/include/python3.6m
+
 If cmake failed to found OpenCV, remove the generated files from the build directory, and run cmake with the option -DOpenCV_DIR=[path to directory build of your opencv installation]. Ex.:
 
 ```
